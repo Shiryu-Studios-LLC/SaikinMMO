@@ -1,0 +1,12 @@
+[submodule "SaikinStory"]
+	path = SaikinStory
+	url = https://github.com/Shiryu-Studios-LLC/SaikinStory.git
+[submodule "SaikinGame"]
+	path = SaikinGame
+	url = https://github.com/Shiryu-Studios-LLC/SaikinGame.git
+[submodule "SaikinBackend"]
+	path = SaikinBackend
+	url = https://github.com/Shiryu-Studios-LLC/SaikinBackend.git
+[submodule "SaikinAssets"]
+	path = SaikinAssets
+	url = https://github.com/Shiryu-Studios-LLC/SaikinAssets.git

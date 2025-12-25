@@ -1,0 +1,57 @@
+# Unreal Engine
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+*.uasset
+*.umap
+
+# Visual Studio / JetBrains / VS Code
+.vs/
+.vscode/
+*.user
+*.userprefs
+*.rsuser
+*.sln.DotSettings.user
+
+# .NET / C#
+**/bin/
+**/obj/
+**/logs/
+*.nuget.props
+*.nuget.targets
+
+# Python / tooling
+__pycache__/
+*.pyc
+
+# Tooling
+.claude/
+.mcp/
+unreal-mcp/
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Env / secrets
+.env
+*.env
+secrets/
+vault/data/
+
+# Misc
+*.log
+*.pdb
+*.db
+*.opensdf
+*.opendb
