@@ -73,3 +73,36 @@ This includes:
 - Social state
 
 The client holds only transient, cached representat
+
+---
+
+### AD-006 — Git Submodule Update Policy
+**Status:** Accepted  
+**Date:** 2025-XX-XX  
+
+This repository uses Git submodules for major components (e.g., Backend, SaikinStory).
+
+**Rules:**
+
+- Each submodule is an independent Git repository.
+- Changes MUST be committed and pushed inside the submodule repository first.
+- The parent repository tracks submodules by commit pointer only.
+- After pushing submodule changes that should be consumed by the project, the parent repository MUST:
+  - Stage the submodule directory
+  - Commit the updated submodule pointer
+  - Push the parent repository
+
+**Order of operations (mandatory):**
+1. Commit and push changes in the submodule repository
+2. Commit the updated submodule pointer in the parent repository
+3. Push the parent repository
+
+**Prohibited behaviors:**
+- Relying on uncommitted submodule changes
+- Assuming the parent repository updates submodule pointers automatically
+- Pushing the parent repository without pushing submodules first
+- Using force-push on submodules or parent repository except in explicitly documented recovery scenarios
+
+**Rationale:**  
+This prevents silent version drift, broken clones, inconsistent builds, and deployment errors.  
+Explicit submodule pointer updates ensure reproducibility and long-term project stability.
